@@ -17,3 +17,6 @@ def shorten_link(full_link: str):
         if url_data['status'] == 7:
             short_link: str = url_data['shortlink']
             print('Link:', short_link)
+
+        else: 
+            print('Error status', url_data['status'])
