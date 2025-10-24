@@ -19,4 +19,10 @@ def shorten_link(full_link: str):
             print('Link:', short_link)
 
         else: 
-            print('Error status', url_data['status'])
+            print('Error status:', url_data['status'])
+
+def main():
+    input_link: str = input('Enter a link: ')
+    shorten_link(input_link)
+
+
