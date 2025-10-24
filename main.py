@@ -26,3 +26,5 @@ def main():
     shorten_link(input_link)
 
 
+if __name__ == '__main__':
+    main()
