@@ -4,18 +4,24 @@ import os
 
 
 API_KEY: Final[str] = os.environ["CUTTLY_API_KEY"]
-BASE_URL: Final[str] = 'https://cutt.ly/api/api.ph'
+BASE_URL: Final[str] = 'https://cutt.ly/api/api.php'
 
 
 def shorten_link(full_link: str):
     payload: dict = {'key': API_KEY, 'short': full_link}
     request = requests.get(BASE_URL, params=payload)
+    print("============================")
+    print("============================")
+    print(request)
+    print("============================")
+    print("============================")
+    print("============================")
     data: dict = request.json()
 
 
-    if url_data:= data.get('url'):
+    if url_data := data.get('url'):
         if url_data['status'] == 7:
-            short_link: str = url_data['shortlink']
+            short_link: str = url_data['shortLink']
             print('Link:', short_link)
 
         else: 
