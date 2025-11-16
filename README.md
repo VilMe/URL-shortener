@@ -1,3 +1,3 @@
 # URL-shortener
 
-Use to shorten long URLs you want to share
+Use cutt.ly to shorten long URLs you want to share
